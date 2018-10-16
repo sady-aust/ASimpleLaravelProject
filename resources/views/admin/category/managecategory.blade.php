@@ -37,7 +37,7 @@
                                     <a href="{{route("/editcategory",["id"=>$category->id])}}" class="btn btn-success btn-xs">
                                         <span class="glyphicon glyphicon-edit"></span>
                                     </a>
-                                    <a href="" class="btn btn-danger btn-xs">
+                                    <a href="{{route("/deletecategory",["id"=>$category->id])}}" class="btn btn-danger btn-xs">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </a>
                                 </td>

@@ -66,4 +66,21 @@ class adminController extends Controller
         $category = Category::find($id);
         return view("admin.category.editcategory",["category"=>$category]);
     }
+
+    public function updateCategory(Request $request){
+       $category = Category::find($request->id);
+       $category->categoryname = $request->categoryname;
+       $category->categorydescription = $request->categorydescription;
+       $category->publicationstatus = $request->publicationstatus;
+       $category->save();
+
+       return redirect("/managecategory")->with("message","Updated");
+    }
+
+    public function deleteCategory($id){
+        $category = Category::find($id);
+        $category->delete();
+
+        return redirect("/managecategory")->with("message","Deleted");
+    }
 }

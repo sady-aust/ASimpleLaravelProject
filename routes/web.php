@@ -60,3 +60,47 @@ Route::get("/editcategory/{id}",[
     "uses"=>"adminController@editcategory",
     "as"=>"/editcategory"
 ]);
+
+Route::post("/update-category",[
+    "uses" => "adminController@updateCategory",
+    "as"=>"/update-category"
+]);
+
+Route::get("/deletecategory/{id}",[
+    "uses" =>"adminController@deleteCategory",
+    "as" =>"/deletecategory"
+]);
+
+Route::get("/addbrand",[
+    "uses"=>"brandController@AddBrand",
+    "as"=>"/addbrand"
+]);
+Route::post("/addabrand",[
+    "uses"=>"brandController@AddANewBrand",
+    "as"=>"/addabrand"
+]);
+
+Route::get('/managebrand',[
+   "uses" =>"brandController@ManageBrand",
+   "as"=>"/managebrand"
+]);
+
+Route::get("/updatestatus/{id}",[
+    "uses"=>"brandController@UpdateBrandStatus",
+    "as"=>"/updatestatus"
+]);
+
+Route::get("/editbarnd/{id}",[
+   "uses"=>"brandController@EditBrand",
+   "as"=>"/editbarnd"
+]);
+
+Route::post("/editabrand",[
+    "uses"=>"brandController@EditaBrand",
+    "as"=>"/editabrand"
+]);
+
+Route::get("/deletebrand/{id}",[
+    "uses"=>"brandController@DeleteBrand",
+    "as"=>"/deletebrand"
+]);
