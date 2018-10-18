@@ -104,3 +104,18 @@ Route::get("/deletebrand/{id}",[
     "uses"=>"brandController@DeleteBrand",
     "as"=>"/deletebrand"
 ]);
+
+Route::get("/addproduct",[
+    "uses"=>"productController@AddProduct",
+    "as"=>"/addproduct"
+]);
+
+Route::post("/addnewProduct",[
+    "uses"=>"productController@AddAProduct",
+    "as"=>"/addaproduct"
+]);
+
+Route::get("/manageProduct",[
+    "uses"=>"productController@ManageProduct",
+    "as"=>"/manageProduct"
+]);

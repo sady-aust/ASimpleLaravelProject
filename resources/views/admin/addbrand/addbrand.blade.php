@@ -9,6 +9,10 @@
         </div>
         <!-- /.row -->
         <div class="row text-center">
+            {{--{{Form::open()}}
+                {{Form::label('Brand Name', 'Brand Name', ['class' => ''])}}
+                {{Form::text('Brand Name','',['class' => 'form-control'])}}
+            {{Form::close()}}--}}
             {{Session::get('message')}}
             <form method="post" action="{{route("/addabrand")}}">
                 {{ csrf_field() }}
@@ -18,6 +22,13 @@
                         <td>Brand Name</td>
                         <td>
                             <input class="form-control" type="text" name="brandname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>
+                                {{$errors->has('brandname')?$errors->first('brandname'):' '}}
+                            </span>
                         </td>
                     </tr>
                     <tr>

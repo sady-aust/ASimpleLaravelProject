@@ -13,6 +13,11 @@ class brandController extends Controller
     }
 
     public function AddANewBrand(Request $request){
+        $this->validate($request,[
+            "brandname"=>"required|alpha",
+            "branddescription"=>"required",
+            "brandstatus"=>"required"
+        ]);
              $brand = new Brand();
              $brand->brandname = $request->brandname;
              $brand->branddescription = $request->branddescription;
