@@ -139,3 +139,8 @@ Route::get("/show-cart",[
     "uses"=>"cartController@viewcart",
     "as"=>"Cart-Item"
 ]);
+
+Route::get("/sendingMail",[
+    "uses"=>"cartController@SendMail",
+    "as"=>"/sendconfirmationmail"
+]);

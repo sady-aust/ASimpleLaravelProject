@@ -1,0 +1,1 @@
+<h1>Hello Demo,Thanks for join our community.Your Mail address is {{$mail}}</h1>

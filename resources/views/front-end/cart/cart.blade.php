@@ -16,32 +16,28 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-        </tr>
+        @php($i=1)
+        @foreach($cartItems as $cartItem)
+
+            <tr>
+                <td scope="row">{{$i++}}</td>
+                <td>{{$cartItem["productName"]}}</td>
+               <td> <img src="{{$cartItem["image"]}}" width="50" height="50"></td>
+                <td>{{($cartItem["price"])}}</td>
+                <td>{{$cartItem["quantity"]}}</td>
+
+                <td>
+                    <a>Delete</a>
+                </td>
+
+            </tr>
+
+            @endforeach
+
         </tbody>
+
+
     </table>
 
-
+<a class="btn btn-success" href="{{route("/sendconfirmationmail")}}">Confirmation</a>
 @endsection
