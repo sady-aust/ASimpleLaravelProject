@@ -64,4 +64,10 @@ class productController extends Controller
 
         return view("admin.product.manageproduct",["products"=>$products]);
     }
+
+    public function ViewProduct($id){
+        $product = Product::FIND($id);
+
+        return view("front-end.viewproduct.viewProduct",["product"=>$product]);
+    }
 }

@@ -16,7 +16,7 @@ Route::get("/",[
     "as"   => "/"
 ]);
 
-Route::get("/category-product",[
+Route::get("/category-product/{id}",[
     "uses"=>"NewShopController@categoryProduct",
     "as" => "/category-product"
 ]);
@@ -118,4 +118,24 @@ Route::post("/addnewProduct",[
 Route::get("/manageProduct",[
     "uses"=>"productController@ManageProduct",
     "as"=>"/manageProduct"
+]);
+
+Route::get("/Product-Details/{id}",[
+   "uses"=>"productController@ViewProduct",
+   "as"=>"/product-details"
+]);
+
+Route::get("/brand/{id}",[
+    "uses"=>"brandController@viewBrandProducts",
+    "as"=>"/brand"
+]);
+
+Route::post("/add-to-cart",[
+   "uses"=>"cartController@addtocart",
+   "as"=>"/add-to-cart"
+]);
+
+Route::get("/show-cart",[
+    "uses"=>"cartController@viewcart",
+    "as"=>"Cart-Item"
 ]);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Brand;
 use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class brandController extends Controller
@@ -67,5 +68,13 @@ class brandController extends Controller
         $brand = Brand::find($id);
         $brand->delete();
         return redirect("/managebrand")->with("message","Brand Deleted");
+    }
+
+    public function viewBrandProducts($id){
+        $products = Product::WHERE("brand_id",$id)
+                            ->WHERE("publicationstatus",1)
+                            ->get();
+
+        return view("front-end.brandproducts.brandproducts",["products"=>$products]);
     }
 }

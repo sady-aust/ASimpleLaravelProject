@@ -1,7 +1,7 @@
 @extends("front-end.master")
 @section("title")
     <title>Category</title>
-    @endsection
+@endsection
 @section("body")
     <!--banner-->
     <div class="banner1">
@@ -224,31 +224,31 @@
                                         <div class="product-tab">
 
                                             @foreach($products as $product)
-                                            <div class="col-md-4 product-tab-grid simpleCart_shelfItem">
-                                                <div class="grid-arr">
-                                                    <div  class="grid-arrival">
-                                                        <figure>
-                                                            <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
-                                                                <div class="grid-img">
-                                                                    <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive" alt="">
-                                                                </div>
-                                                                <div class="grid-img">
-                                                                    <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive"  alt="">
-                                                                </div>
-                                                            </a>
-                                                        </figure>
-                                                    </div>
-                                                    <div class="block">
-                                                        <div class="starbox small ghosting"> </div>
-                                                    </div>
-                                                    <div class="women">
-                                                        <h6><a href="single.html">{{$product->productname}}</a></h6>
-                                                        <span class="size">XL / XXL / S </span>
-                                                        <p ><em class="item_price">Tk: {{$product->productprice}}</em></p>
-                                                        <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                                                <div class="col-md-4 product-tab-grid simpleCart_shelfItem">
+                                                    <div class="grid-arr">
+                                                        <div  class="grid-arrival">
+                                                            <figure>
+                                                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                                                    <div class="grid-img">
+                                                                        <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive" alt="">
+                                                                    </div>
+                                                                    <div class="grid-img">
+                                                                        <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive"  alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="block">
+                                                            <div class="starbox small ghosting"> </div>
+                                                        </div>
+                                                        <div class="women">
+                                                            <h6><a href="single.html">{{$product->productname}}</a></h6>
+                                                            <span class="size">XL / XXL / S </span>
+                                                            <p ><em class="item_price">Tk: {{$product->productprice}}</em></p>
+                                                            <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             @endforeach
                                             <div class="clearfix"></div>
                                         </div>
@@ -259,37 +259,37 @@
                                     <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 
                                         @foreach($products as $product)
-                                        <div class="product-tab1">
-                                            <div class="col-md-4 product-tab1-grid">
-                                                <div class="grid-arr">
-                                                    <div  class="grid-arrival">
-                                                        <figure>
-                                                            <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
-                                                                <div class="grid-img">
-                                                                    <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive" alt="">
-                                                                </div>
-                                                                <div class="grid-img">
-                                                                    <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive"  alt="">
-                                                                </div>
-                                                            </a>
-                                                        </figure>
+                                            <div class="product-tab1">
+                                                <div class="col-md-4 product-tab1-grid">
+                                                    <div class="grid-arr">
+                                                        <div  class="grid-arrival">
+                                                            <figure>
+                                                                <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                                                    <div class="grid-img">
+                                                                        <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive" alt="">
+                                                                    </div>
+                                                                    <div class="grid-img">
+                                                                        <img  src="{{ asset($product->imagedirectory) }}" class="img-responsive"  alt="">
+                                                                    </div>
+                                                                </a>
+                                                            </figure>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
-                                                <div class="block">
-                                                    <div class="starbox small ghosting"> </div>
+                                                <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
+                                                    <div class="block">
+                                                        <div class="starbox small ghosting"> </div>
+                                                    </div>
+                                                    <div class="women">
+                                                        <h6><a href="single.html">{{$product->productname}}</a></h6>
+                                                        <span class="size">XL / XXL / S </span>
+                                                        <p>{{$product->shortdescription}}</p>
+                                                        <p >TK:<em class="item_price">{{$product->productprice}}</em></p>
+                                                        <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                                                    </div>
                                                 </div>
-                                                <div class="women">
-                                                    <h6><a href="single.html">{{$product->productname}}</a></h6>
-                                                    <span class="size">XL / XXL / S </span>
-                                                    <p>{{$product->shortdescription}}</p>
-                                                    <p >TK:<em class="item_price">{{$product->productprice}}</em></p>
-                                                    <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
-                                                </div>
+                                                <div class="clearfix"></div>
                                             </div>
-                                            <div class="clearfix"></div>
-                                        </div>
                                         @endforeach
 
 
@@ -304,4 +304,4 @@
         </div>
     </div>
     <!--content-->
-    @endsection
+@endsection
